@@ -37,7 +37,8 @@ LABEL org.opencontainers.image.title=azp-agent \
 
 USER 0
 
-RUN python3 -m ensurepip --upgrade
-RUN python3 -m pip install openshift-client semver==2.13.0 --index-url https://pypi.org/simple/ --extra-index-url https://pypi.org/simple/
+RUN python3 -m ensurepip --upgrade && \
+    python3 -m pip install --upgrade pip && \
+    python3 -m pip install openshift-client semver==2.13.0 --index-url https://pypi.org/simple/ --extra-index-url https://pypi.org/simple/
 
 USER 1001
