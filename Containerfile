@@ -24,7 +24,7 @@ ARG build_host
 ARG build_id
 
 LABEL org.opencontainers.image.title=azp-agent \
-    org.opencontainers.image.description="An example ubi9 azp-agent." \
+    org.opencontainers.image.description="An InstallPlan Approver and Verifier Image for disconnected environments. For use with the operators-installer helm chart <https://github.com/redhat-cop/helm-charts/tree/main/charts/operators-installer#disconnected-use>." \
     org.opencontainers.image.source=${git_origin_url} \
     org.opencontainers.image.revision=${git_revision} \
     org.opencontainers.image.base.digest=${base_image_digest} \
