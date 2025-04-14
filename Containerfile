@@ -23,17 +23,17 @@ ARG build_host
 # a unique id for the build of this image
 ARG build_id
 
-LABEL org.opencontainers.image.title=azp-agent \
+LABEL org.opencontainers.image.title="installplan approver verifier" \
     org.opencontainers.image.description="An InstallPlan Approver and Verifier Image for disconnected environments. For use with the operators-installer helm chart <https://github.com/redhat-cop/helm-charts/tree/main/charts/operators-installer#disconnected-use>." \
-    org.opencontainers.image.source=${git_origin_url} \
-    org.opencontainers.image.revision=${git_revision} \
-    org.opencontainers.image.base.digest=${base_image_digest} \
-    org.opencontainers.image.base.name=${base_image_repository}:${base_image_tag} \
-    org.opencontainers.image.version=${src_version} \
-    org.opencontainers.image.created=${created} \
-    org.opencontainers.image.authors=${author_emails} \    
-    com.example.org.context.build-host=${build_host} \
-    com.example.org.context.build-id=${build_id}
+    org.opencontainers.image.source="${git_origin_url}" \
+    org.opencontainers.image.revision="${git_revision}" \
+    org.opencontainers.image.base.digest="${base_image_digest}" \
+    org.opencontainers.image.base.name="${base_image_repository}:${base_image_tag}" \
+    org.opencontainers.image.version="${src_version}" \
+    org.opencontainers.image.created="${created}" \
+    org.opencontainers.image.authors="${author_emails}" \    
+    com.example.org.context.build-host="${build_host}" \
+    com.example.org.context.build-id="${build_id}"
 
 USER 0
 
