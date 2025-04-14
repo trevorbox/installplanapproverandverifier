@@ -5,8 +5,8 @@ An image for disconnected use (no pip) with the (operators-installer)[https://gi
 ```sh
 export TAG="quay.io/trevorbox/installplanapproverandverifier:4.16.1" # replace with your tag
 
-export BASE_IMG_REPO="registry.access.redhat.com/ubi9/ubi"
-export BASE_IMG_TAG="latest"
+export BASE_IMG_REPO="quay.io/openshift/origin-cli"
+export BASE_IMG_TAG="4.16"
 
 podman build -t $TAG . \
   --build-arg git_origin_url=$(git config --get remote.origin.url) \
